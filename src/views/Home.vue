@@ -1,47 +1,56 @@
 <template>
-  <div class="flex flex-col justify-between min-h-screen" ref="vantaRef">
-    <header class="mx-5">
-      <h1 class="font-bold text-4xl md:text-5xl text-center text-white">
+  <div class="flex flex-col justify-content-around h-100" >
+    <div class="flex blank-header"/>
+    <div>
+      <h1 class="content-header">
         MUHAMMAD IQBAL IMANI ATFAN
       </h1>
+      <div class="flex flex-row justify-content-center">
+      <a href="https://github.com/Iotatfan">
+        <fa-icon 
+          class="icon-glow"
+          :icon="['fab', 'github']" 
+        />
+      </a>
+      <a href="https://www.linkedin.com/in/imani-atfan/">
+        <fa-icon 
+          class="icon-glow"
+          :icon="['fab', 'linkedin']" 
+        />
+      </a>
+      <a href="mailto:imaniatfan@gmail.com">
+        <fa-icon 
+          class="icon-glow"
+          :icon="['fas', 'envelope']" 
+        />
+      </a>
+    </div>
       <div>
-        <VueWriter
+        <!-- <VueWriter
           :array="arr"
           caret="cursor"
           class="mx-5 text-2xl md:text-3xl font-semibold text-white"
         >
-        </VueWriter>
+        </VueWriter> -->
       </div>
-    </header>
-    <footer class="flex flex-col mb-8">
-      <portfolio />
-      <div class="flex flex-row mx-auto">
-        <github-icon />
-        <linked-in-icon />
-        <email-icon />
-      </div>
-    </footer>
+    </div>
+    
+    <div  class="flex flex-row justify-content-center">
+      <io-button
+        label="My Projects"
+        buttonType="no-border"
+        @click="scrollDown"
+      />
+    </div>
   </div>
 </template>
 
 <script>
-import { defineAsyncComponent } from "vue";
-import * as THREE from "three/build/three.min";
-import NET from "vanta/dist/vanta.net.min";
-import GithubIcon from "../components/icons/GithubIcon.vue";
-import LinkedInIcon from "../components/icons/LinkedInIcon.vue";
-import EmailIcon from "../components/icons/EmailIcon.vue";
-
-const Portfolio = defineAsyncComponent(() =>
-  import("../components/Overlay.vue")
-);
+import IoButton from '@/external/components/button/Button.vue'
 
 export default {
   components: {
-    Portfolio,
-    GithubIcon,
-    LinkedInIcon,
-    EmailIcon,
+    IoButton
   },
   setup() {
     const arr = [
@@ -54,33 +63,37 @@ export default {
       arr,
     };
   },
-  methods: {},
-  mounted() {
-    this.vantaEffect = NET({
-      el: this.$refs.vantaRef,
-      THREE: THREE,
-      gyroControl: true,
-      points: 10.0,
-    });
-  },
-  beforeUnmount() {
-    if (this.vantaEffect) {
-      this.vantaEffect.destroy();
+  methods: {
+    scrollDown: function() {
+      console.log('Scroll Down Animation')
     }
+  },
+  mounted() {
+
   },
 };
 </script>
 
 <style>
-.glow {
+
+.icon-glow {
+  font-size: 3rem;
+  padding-left: .5rem;
+  padding-right: .5rem;
+  color: white !important;
   opacity: 0.75;
   transition: 0.3s !important;
 }
 
-.glow:hover {
+.icon-glow:hover {
   opacity: 1;
 }
 
+.io-btn {
+  font-family: 'Courier New', Courier, monospace !important;
+}
+
+/* 
 .is-typed {
   font-family: "Courier New", Courier, monospace !important;
 }
@@ -88,12 +101,5 @@ export default {
 .is-typed span.typed {
   color: white !important;
 }
-
-header {
-  padding-top: 40vh;
-}
-
-footer {
-  padding-bottom: 10px;
-}
+*/
 </style>

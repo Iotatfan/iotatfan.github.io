@@ -1,0 +1,3 @@
+[submodule "src/external"]
+	path = src/external
+	url = git@github.com:Iotatfan/iotatfan-vue-component.git

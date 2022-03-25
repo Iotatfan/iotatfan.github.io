@@ -21,7 +21,7 @@ export default {
 }
 
 body {
-  background: #23153c;
+  background: var(--black-body);
   margin: 0%;
 }
 </style>
