@@ -1,30 +1,10 @@
 <template>
-  <div class="flex flex-col justify-content-around h-100" >
+  <div class="home-layout flex flex-col">
     <div class="flex blank-header"/>
     <div>
       <h1 class="content-header">
         MUHAMMAD IQBAL IMANI ATFAN
       </h1>
-      <div class="flex flex-row justify-content-center">
-      <a href="https://github.com/Iotatfan">
-        <fa-icon 
-          class="icon-glow"
-          :icon="['fab', 'github']" 
-        />
-      </a>
-      <a href="https://www.linkedin.com/in/imani-atfan/">
-        <fa-icon 
-          class="icon-glow"
-          :icon="['fab', 'linkedin']" 
-        />
-      </a>
-      <a href="mailto:imaniatfan@gmail.com">
-        <fa-icon 
-          class="icon-glow"
-          :icon="['fas', 'envelope']" 
-        />
-      </a>
-    </div>
       <div>
         <!-- <VueWriter
           :array="arr"
@@ -34,13 +14,35 @@
         </VueWriter> -->
       </div>
     </div>
-    
-    <div  class="flex flex-row justify-content-center">
-      <io-button
-        label="My Projects"
-        buttonType="no-border"
-        @click="scrollDown"
-      />
+
+    <div class="bottom-actions">
+      <div class="flex flex-row justify-content-center">
+        <a href="https://github.com/Iotatfan">
+          <fa-icon
+            class="icon-glow"
+            :icon="['fab', 'github']"
+          />
+        </a>
+        <a href="https://www.linkedin.com/in/imani-atfan/">
+          <fa-icon
+            class="icon-glow"
+            :icon="['fab', 'linkedin']"
+          />
+        </a>
+        <a href="mailto:imaniatfan@gmail.com">
+          <fa-icon
+            class="icon-glow"
+            :icon="['fas', 'envelope']"
+          />
+        </a>
+      </div>
+      <div class="flex flex-row justify-content-center">
+        <io-button
+          label="Hobby Collection"
+          buttonType="no-border"
+          @click="scrollDown"
+        />
+      </div>
     </div>
   </div>
 </template>
@@ -65,7 +67,7 @@ export default {
   },
   methods: {
     scrollDown: function() {
-      console.log('Scroll Down Animation')
+      window.location.href = 'https://iotatfan.github.io/hobby-collection/'
     }
   },
   mounted() {
@@ -75,6 +77,14 @@ export default {
 </script>
 
 <style>
+.home-layout {
+  min-height: 100vh;
+}
+
+.bottom-actions {
+  margin-top: auto;
+  padding-bottom: 2rem;
+}
 
 .icon-glow {
   font-size: 3rem;

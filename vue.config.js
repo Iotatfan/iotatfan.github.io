@@ -1,10 +1,13 @@
 const BundleAnalyzerPlugin = require('webpack-bundle-analyzer')
     .BundleAnalyzerPlugin;
 
+const shouldAnalyze = process.env.ANALYZE === 'true';
+
 module.exports = {
+    parallel: false,
     publicPath: '/',
     configureWebpack: {
-      plugins: [new BundleAnalyzerPlugin()],
+      plugins: shouldAnalyze ? [new BundleAnalyzerPlugin()] : [],
       devtool: 'source-map'
   }
 }
