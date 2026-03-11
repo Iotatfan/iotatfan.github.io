@@ -5,14 +5,6 @@
       <h1 class="content-header">
         MUHAMMAD IQBAL IMANI ATFAN
       </h1>
-      <div>
-        <!-- <VueWriter
-          :array="arr"
-          caret="cursor"
-          class="mx-5 text-2xl md:text-3xl font-semibold text-white"
-        >
-        </VueWriter> -->
-      </div>
     </div>
 
     <div class="bottom-actions">
@@ -54,25 +46,11 @@ export default {
   components: {
     IoButton
   },
-  setup() {
-    const arr = [
-      "I'm programmer",
-      "I'm currently unemployed",
-      "I love playing games",
-    ];
-
-    return {
-      arr,
-    };
-  },
   methods: {
     scrollDown: function() {
       window.location.href = 'https://iotatfan.github.io/hobby-collection/'
     }
-  },
-  mounted() {
-
-  },
+  }
 };
 </script>
 
@@ -102,14 +80,4 @@ export default {
 .io-btn {
   font-family: 'Courier New', Courier, monospace !important;
 }
-
-/* 
-.is-typed {
-  font-family: "Courier New", Courier, monospace !important;
-}
-
-.is-typed span.typed {
-  color: white !important;
-}
-*/
 </style>
