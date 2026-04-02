@@ -10,4 +10,5 @@ import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 library.add(faEnvelope, faGlobe, faCircle, faGithub, faLinkedin)
 const app = createApp(App).use(router)
 app.component('fa-icon', FontAwesomeIcon)
+app.component('font-awesome-icon', FontAwesomeIcon)
 app.mount('#app')

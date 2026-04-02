@@ -17,32 +17,29 @@
 
     <footer class="mt-auto flex flex-col items-center gap-4">
       <div class="flex gap-3">
-        <a class="text-2xl text-[rgba(223,231,246,0.82)] transition duration-200 ease-in-out hover:-translate-y-0.5 hover:text-white md:text-3xl"
-          href="https://github.com/Iotatfan" aria-label="GitHub">
-          <fa-icon :icon="['fab', 'github']" />
-        </a>
-        <a class="text-2xl text-[rgba(223,231,246,0.82)] transition duration-200 ease-in-out hover:-translate-y-0.5 hover:text-white md:text-3xl"
-          href="https://www.linkedin.com/in/imani-atfan/" aria-label="LinkedIn">
-          <fa-icon :icon="['fab', 'linkedin']" />
-        </a>
-        <a class="text-2xl text-[rgba(223,231,246,0.82)] transition duration-200 ease-in-out hover:-translate-y-0.5 hover:text-white md:text-3xl"
-          href="mailto:imaniatfan@gmail.com" aria-label="Email">
-          <fa-icon :icon="['fas', 'envelope']" />
-        </a>
+        <GithubIcon class="text-2xl transition duration-200 ease-in-out hover:-translate-y-0.5 hover:text-white md:text-3xl" />
+        <LinkedInIcon class="text-2xl transition duration-200 ease-in-out hover:-translate-y-0.5 hover:text-white md:text-3xl" />
+        <EmailIcon class="text-2xl transition duration-200 ease-in-out hover:-translate-y-0.5 hover:text-white md:text-3xl" />
       </div>
-      <io-button label="Hobby Collection" buttonType="no-border"
-        class="px-0 py-0 text-base font-semibold tracking-[0.11em] text-[#eef4ff] opacity-95 md:text-lg"
+      <Button label="Hobby Collection" buttonType="no-border"
+        class="px-0 py-0 text-base font-semibold opacity-95 md:text-lg"
         @click="scrollDown" />
     </footer>
   </main>
 </template>
 
 <script>
-import IoButton from '@/components/Button.vue'
+import Button from '@/components/Button.vue'
+import GithubIcon from '../components/icons/GithubIcon.vue';
+import LinkedInIcon from '../components/icons/LinkedInIcon.vue';
+import EmailIcon from '../components/icons/EmailIcon.vue';
 
 export default {
   components: {
-    IoButton
+    Button,
+    GithubIcon,
+    LinkedInIcon,
+    EmailIcon
   },
   methods: {
     scrollDown: function () {

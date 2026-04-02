@@ -10,7 +10,7 @@
 
 <script>
 export default {
-  name: "IoButton",
+  name: "Button",
   emits: ["click"],
   props: {
     label: {

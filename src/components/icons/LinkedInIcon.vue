@@ -9,7 +9,7 @@
 
 <script>
 export default {
-  name: "LinkedIn Icon",
+  name: "LinkedInIcon",
   props: {
     link: {
       type: String,
