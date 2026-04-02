@@ -1,5 +1,5 @@
 <template>
-  <div id="nav">
+  <div id="app" class="text-center text-white antialiased">
     <router-view />
   </div>
 </template>
@@ -10,18 +10,3 @@ export default {
   components: {},
 };
 </script>
-
-<style>
-#app {
-  font-family: "Courier New", Courier, monospace !important;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: white;
-}
-
-body {
-  background: var(--black-body);
-  margin: 0%;
-}
-</style>

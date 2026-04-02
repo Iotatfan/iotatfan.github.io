@@ -14,6 +14,9 @@
         carousel-item
         absolute
         opacity-0
+        transition-opacity
+        duration-700
+        ease-linear
         object-scale-down
         max-h-56
         xl:max-h-80
@@ -41,9 +44,3 @@ export default {
   },
 };
 </script>
-
-<style>
-.carousel-item {
-  transition: opacity 0.6s linear;
-}
-</style>

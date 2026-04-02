@@ -1,6 +1,7 @@
 <template>
   <button
     class="
+      font-mono
       font-bold
       text-3xl text-center text-white
       glow
@@ -21,9 +22,3 @@ export default {
   },
 };
 </script>
-
-<style scoped>
-button {
-  font-family: "Courier New", Courier, monospace !important;
-}
-</style>

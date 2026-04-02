@@ -18,9 +18,12 @@
             :for="`carousel-${index - 1}`"
             class="
               carousel-bullet
+              mx-0
               cursor-pointer
               text-xs text-white
-              hover:text-violet
+              transition-all
+              duration-300
+              hover:text-purple-500
               font-bold
             "
           >
@@ -53,19 +56,3 @@ export default {
   },
 };
 </script>
-
-<style>
-.carousel-bullet:hover {
-  transition: 0.4s;
-  margin: 0px !important;
-}
-
-.carousel-open:checked ~ .carousel-bullet {
-  color: rgba(145, 42, 94, 1);
-}
-
-.carousel-open:checked + .carousel-item {
-  position: static;
-  opacity: 100;
-}
-</style>

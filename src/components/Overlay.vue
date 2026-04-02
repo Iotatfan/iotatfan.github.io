@@ -34,17 +34,17 @@
                   justify-between
                   w-11/12
                   2xl:w-8/12
-                  h-screen
+                  h-[96vh]
                   px-3
                   py-6
-                  my-2
+                  mt-3
                   overflow-hidden
                   text-left
                   align-baseline
                   transition-all
                   transform
                   bg-black bg-opacity-70
-                  border-2 border-violet
+                  border-2 border-purple-500
                   shadow-2xl
                 "
               >
@@ -56,6 +56,7 @@
                     <DialogTitle
                       as="h3"
                       class="
+                        font-mono
                         text-3xl
                         xl:text-4xl
                         text-center
@@ -69,6 +70,7 @@
                     </DialogTitle>
                     <p
                       class="
+                        font-mono
                         pt-3
                         text-xl
                         xl:text-2xl
@@ -166,19 +168,3 @@ export default {
   },
 };
 </script>
-
-<style scoped>
-.h-screen {
-  margin-top: 12px;
-  height: 96vh !important;
-}
-
-.w-full {
-  width: 98%;
-}
-
-p,
-h3 {
-  font-family: "Courier New", Courier, monospace !important;
-}
-</style>
