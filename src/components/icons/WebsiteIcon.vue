@@ -1,6 +1,6 @@
 <template>
   <a
-    class="text-white glow text-lg sm:text-xl cursor-pointer mx-2 transition duration-200 ease-in-out hover:-translate-y-0.5 hover:text-white"
+    class="glow mx-2 cursor-pointer text-lg text-white transition duration-200 ease-in-out hover:-translate-y-0.5 hover:text-white sm:text-xl"
     :href="link"
   >
     <font-awesome-icon :icon="['fas', 'globe']" />

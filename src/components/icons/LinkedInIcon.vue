@@ -1,6 +1,6 @@
 <template>
   <a
-    class="text-white glow text-2xl sm:text-4xl cursor-pointer mx-2"
+    class="glow mx-2 cursor-pointer text-2xl text-white sm:text-4xl"
     :href="link"
   >
     <font-awesome-icon :icon="['fab', 'linkedin']" />

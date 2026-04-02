@@ -1,5 +1,8 @@
 <template>
-  <div id="app" class="text-center text-white antialiased">
+  <div
+    id="app"
+    class="text-center text-white antialiased"
+  >
     <router-view />
   </div>
 </template>

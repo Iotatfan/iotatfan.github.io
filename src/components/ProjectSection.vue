@@ -3,21 +3,23 @@
     id="projects"
     class="w-full max-w-6xl items-center justify-center"
   >
-    <h2 class="mb-5 text-center text-2xl text-white font-bold tracking-wide md:text-3xl">Projects</h2>
+    <h2 class="mb-5 text-center text-2xl font-bold tracking-wide text-white md:text-3xl">
+      Projects
+    </h2>
     <div class="grid grid-cols-1 gap-6">
       <article
         v-for="(project, index) in projects"
         :key="project.title + index"
         class="mx-auto w-full max-w-4xl rounded-2xl border border-white/20 bg-[#1d3c78] p-4 shadow-xl backdrop-blur-sm"
       >
-        <h3 class="mb-3 text-xl text-center text-white font-bold">{{ project.title }}</h3>
+        <h3 class="mb-3 text-center text-xl font-bold text-white">{{ project.title }}</h3>
         <div class="mb-3 grid grid-cols-1 gap-3 sm:grid-cols-2">
           <img
             v-for="(image, imageIndex) in project.images"
             :key="image + imageIndex"
             :src="image"
             :alt="`${project.title} image ${imageIndex + 1}`"
-            class="h-40 w-full cursor-zoom-in rounded-lg object-cover"
+            class="cursor-zoom-in h-40 w-full rounded-lg object-cover"
             @click="openImagePopup(image, project.title, imageIndex)"
           />
         </div>
@@ -66,34 +68,34 @@
 </template>
 
 <script>
-import GithubIcon from './icons/GithubIcon.vue';
-import WebsiteIcon from './icons/WebsiteIcon.vue';
-import YouTubeIcon from './icons/YouTubeIcon.vue';
+import GithubIcon from "./icons/GithubIcon.vue";
+import WebsiteIcon from "./icons/WebsiteIcon.vue";
+import YouTubeIcon from "./icons/YouTubeIcon.vue";
 
 export default {
-  name: 'ProjectSection',
+  name: "ProjectSection",
   components: {
     GithubIcon,
     WebsiteIcon,
-    YouTubeIcon
+    YouTubeIcon,
   },
   props: {
     projects: {
       type: Array,
-      default: () => []
-    }
+      default: () => [],
+    },
   },
   data() {
     return {
       zoomedImage: null,
-      zoomedImageAlt: ''
+      zoomedImageAlt: "",
     };
   },
   mounted() {
-    window.addEventListener('keydown', this.handleEscapeKey);
+    window.addEventListener("keydown", this.handleEscapeKey);
   },
   beforeUnmount() {
-    window.removeEventListener('keydown', this.handleEscapeKey);
+    window.removeEventListener("keydown", this.handleEscapeKey);
   },
   methods: {
     openImagePopup(image, title, imageIndex) {
@@ -102,13 +104,13 @@ export default {
     },
     closeImagePopup() {
       this.zoomedImage = null;
-      this.zoomedImageAlt = '';
+      this.zoomedImageAlt = "";
     },
     handleEscapeKey(event) {
-      if (event.key === 'Escape' && this.zoomedImage) {
+      if (event.key === "Escape" && this.zoomedImage) {
         this.closeImagePopup();
       }
-    }
-  }
+    },
+  },
 };
 </script>

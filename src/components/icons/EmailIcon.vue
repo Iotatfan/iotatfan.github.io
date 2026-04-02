@@ -1,6 +1,6 @@
 <template>
   <a
-    class="text-white glow text-2xl sm:text-4xl cursor-pointer mx-1"
+    class="glow mx-1 cursor-pointer text-2xl text-white sm:text-4xl"
     :href="link"
   >
     <font-awesome-icon :icon="['fas', 'envelope']" />
@@ -13,8 +13,8 @@ export default {
   props: {
     link: {
       type: String,
-      default: "mailto:imaniatfan@gmail.com"
-    }
+      default: "mailto:imaniatfan@gmail.com",
+    },
   },
   components: {},
 };
