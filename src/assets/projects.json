@@ -1,0 +1,25 @@
+[
+    {
+        "name": "Hobby Collection | Full-Stack Gallery",
+        "detail": "A sleek, personal gallery built with React and Go to showcase and catalog a collection of Gunpla and figures. It features a secure PostgreSQL database with JWT authentication for management and utilizes Cloudinary for high-performance, optimized media hosting. This project demonstrates a complete full-stack workflow, combining a responsive UI with a scalable backend for efficient hobby tracking.",
+        "images": [
+            "hobby_collection_site/1.png",
+            "hobby_collection_site/2.png"
+        ],
+        "link": {
+            "repo": "null",
+            "site": "https://iotatfan.github.io/hobby-collection/'",
+            "demo": ""
+        }
+    },
+    {
+        "name": "Ama3 Bot | AI Discord Integration",
+        "detail": "A high-performance Discord bot built in Go that uses a lightweight model for intent classification to efficiently route context-aware AI conversations. It ensures 100% reliability through a dual-model fallback strategy and manages short-term memory sessions with Go's concurrency for a seamless user experience. This architecture delivers a responsive, resilient, and scalable solution for multi-user AI interactions.",
+        "images": [],
+        "link": {
+            "repo": "null",
+            "site": "null",
+            "demo": "https://www.youtube.com/watch?v=nQ_TknxLxwM"
+        }
+    }
+]
