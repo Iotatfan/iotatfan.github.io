@@ -6,7 +6,7 @@
     "serve": "node ./scripts/run-vue-cli.js serve",
     "build": "node ./scripts/run-vue-cli.js build",
     "lint": "node ./scripts/run-vue-cli.js lint",
-    "deploy": "gh-pages -d dist"
+    "deploy": "node ./scripts/run-vue-cli.js build && gh-pages -d dist"
   },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.36",
