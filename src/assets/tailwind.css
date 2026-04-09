@@ -8,13 +8,3 @@
     font-family: "Courier New", Courier, monospace;
   }
 }
-
-@layer components {
-  .carousel-open:checked ~ .carousel-bullet {
-    @apply text-purple-700;
-  }
-
-  .carousel-open:checked + .carousel-item {
-    @apply static opacity-100;
-  }
-}

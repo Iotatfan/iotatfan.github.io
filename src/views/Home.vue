@@ -21,14 +21,19 @@
 
       <footer class="mt-auto flex flex-col items-center gap-4 pb-10">
         <div class="flex gap-3">
-          <GithubIcon
+          <SocialIcon
+            :icon="['fab', 'github']"
             link="https://github.com/Iotatfan"
             class="text-2xl transition duration-200 ease-in-out hover:-translate-y-0.5 hover:text-white md:text-3xl"
           />
-          <LinkedInIcon
+          <SocialIcon
+            :icon="['fab', 'linkedin']"
+            link="https://www.linkedin.com/in/imani-atfan/"
             class="text-2xl transition duration-200 ease-in-out hover:-translate-y-0.5 hover:text-white md:text-3xl"
           />
-          <EmailIcon
+          <SocialIcon
+            :icon="['fas', 'envelope']"
+            link="mailto:imaniatfan@gmail.com"
             class="text-2xl transition duration-200 ease-in-out hover:-translate-y-0.5 hover:text-white md:text-3xl"
           />
         </div>
@@ -52,30 +57,29 @@
 
 <script>
 import ProjectSection from "@/components/ProjectSection.vue";
-import GithubIcon from "../components/icons/GithubIcon.vue";
-import LinkedInIcon from "../components/icons/LinkedInIcon.vue";
-import EmailIcon from "../components/icons/EmailIcon.vue";
+import SocialIcon from "@/components/icons/SocialIcon.vue";
 import projectsData from "@/assets/projects.json";
 
-const normalizeLink = (value) => {
-  if (!value || typeof value !== "string") {
+const normalizeOptionalLink = (value) => {
+  if (typeof value !== "string") {
     return null;
   }
 
-  const trimmedValue = value.trim().replace(/^'+|'+$/g, "");
-  if (trimmedValue.length === 0 || trimmedValue.toLowerCase() === "null") {
+  const trimmedValue = value.trim();
+  if (trimmedValue.length === 0) {
     return null;
   }
 
   return trimmedValue;
 };
 
+const resolveProjectImage = (image) =>
+  image.startsWith("http://") || image.startsWith("https://") ? image : require(`@/assets/${image}`);
+
 export default {
   components: {
     ProjectSection,
-    GithubIcon,
-    LinkedInIcon,
-    EmailIcon,
+    SocialIcon,
   },
   data() {
     return {
@@ -84,15 +88,11 @@ export default {
         description: project.detail,
         images: (project.images || [])
           .filter((image) => image && image.trim().length > 0)
-          .map((image) =>
-            image.startsWith("http://") || image.startsWith("https://")
-              ? image
-              : require(`@/assets/${image}`),
-          ),
+          .map((image) => resolveProjectImage(image)),
         links: {
-          repo: normalizeLink(project.link && project.link.repo),
-          site: normalizeLink(project.link && project.link.site),
-          demo: normalizeLink(project.link && project.link.demo),
+          repo: normalizeOptionalLink(project.link?.repo),
+          site: normalizeOptionalLink(project.link?.site),
+          demo: normalizeOptionalLink(project.link?.demo),
         },
       })),
     };

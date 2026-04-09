@@ -19,7 +19,7 @@
             :key="image + imageIndex"
             :src="image"
             :alt="`${project.title} image ${imageIndex + 1}`"
-            class="cursor-zoom-in h-40 w-full rounded-lg object-cover"
+            class="hover:cursor-pointer hover:scale-110 duration-150 ease-in-out h-40 w-full rounded-lg object-cover"
             @click="openImagePopup(image, project.title, imageIndex)"
           />
         </div>
@@ -28,16 +28,19 @@
           v-if="project.links && (project.links.demo || project.links.site || project.links.repo)"
           class="mt-4 flex items-center justify-end gap-3"
         >
-          <YouTubeIcon
+          <SocialIcon
             v-if="project.links.demo"
+            :icon="['fab', 'youtube']"
             :link="project.links.demo"
           />
-          <WebsiteIcon
+          <SocialIcon
             v-if="project.links.site"
+            :icon="['fas', 'globe']"
             :link="project.links.site"
           />
-          <GithubIcon
+          <SocialIcon
             v-if="project.links.repo"
+            :icon="['fab', 'github']"
             :link="project.links.repo"
           />
         </div>
@@ -68,16 +71,12 @@
 </template>
 
 <script>
-import GithubIcon from "./icons/GithubIcon.vue";
-import WebsiteIcon from "./icons/WebsiteIcon.vue";
-import YouTubeIcon from "./icons/YouTubeIcon.vue";
+import SocialIcon from "./icons/SocialIcon.vue";
 
 export default {
   name: "ProjectSection",
   components: {
-    GithubIcon,
-    WebsiteIcon,
-    YouTubeIcon,
+    SocialIcon,
   },
   props: {
     projects: {
