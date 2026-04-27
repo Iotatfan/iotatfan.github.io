@@ -1,0 +1,29 @@
+[
+  {
+    "jobTitle": "Software QA Engineer",
+    "companyName": "Shopee Indonesia",
+    "startDate": "Mar 2023",
+    "endDate": "Apr 2026",
+    "description": [
+      "QA Engineer specializing in product page systems, focused on improving release stability through test design, regression execution, and risk-based validation. Skilled in early defect detection, API testing, debugging, and accelerating QA workflows with automation and AI-assisted testing."
+    ]
+  },
+  {
+    "jobTitle": "Junior Engineer (Digitalent Program)",
+    "companyName": "Shopee Indonesia",
+    "startDate": "Sep 2022",
+    "endDate": "Mar 2023",
+    "description": [
+      "Junior Engineer (Full-stack) who developed a mini e-commerce web application, building frontend and backend systems, integrating APIs, and strengthening system architecture understanding using React and Golang."
+    ]
+  },
+  {
+    "jobTitle": "Junior Frontend Developer",
+    "companyName": "PT Inosoft Trans Sistem",
+    "startDate": "Nov 2021",
+    "endDate": "Aug 2022",
+    "description": [
+      "Junior Frontend Developer specializing in responsive UI development with Vue.js, translating design into reusable components and improving implementation feasibility through close design collaboration"
+    ]
+  }
+]

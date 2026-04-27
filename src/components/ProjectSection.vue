@@ -3,7 +3,7 @@
     id="projects"
     class="w-full max-w-6xl items-center justify-center"
   >
-    <h2 class="mb-5 text-center text-2xl font-bold tracking-wide text-white md:text-3xl">
+    <h2 class="mb-5 text-center text-xl font-bold tracking-wide text-white md:text-2xl">
       Projects
     </h2>
     <div class="grid grid-cols-1 gap-6">
@@ -12,7 +12,7 @@
         :key="project.title + index"
         class="mx-auto w-full max-w-4xl rounded-2xl border border-white/20 bg-[#1d3c78] p-4 shadow-xl backdrop-blur-sm"
       >
-        <h3 class="mb-3 text-center text-xl font-bold text-white">{{ project.title }}</h3>
+        <h3 class="mb-3 text-center text-md font-bold text-white">{{ project.title }}</h3>
         <div class="mb-3 grid grid-cols-1 gap-3 sm:grid-cols-2">
           <img
             v-for="(image, imageIndex) in project.images"
@@ -23,7 +23,7 @@
             @click="openImagePopup(image, project.title, imageIndex)"
           />
         </div>
-        <p class="m-0 text-sm leading-relaxed text-white md:text-base">{{ project.description }}</p>
+        <p class="m-0 text-base leading-relaxed text-white md:text-base">{{ project.description }}</p>
         <div
           v-if="project.links && (project.links.demo || project.links.site || project.links.repo)"
           class="mt-4 flex items-center justify-end gap-3"
@@ -35,7 +35,7 @@
           />
           <SocialIcon
             v-if="project.links.site"
-            :icon="['fas', 'globe']"
+            :icon="['fas', 'link']"
             :link="project.links.site"
           />
           <SocialIcon
