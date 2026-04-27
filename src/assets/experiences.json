@@ -5,7 +5,14 @@
     "startDate": "Mar 2023",
     "endDate": "Apr 2026",
     "description": [
-      "QA Engineer specializing in product page systems, focused on improving release stability through test design, regression execution, and risk-based validation. Skilled in early defect detection, API testing, debugging, and accelerating QA workflows with automation and AI-assisted testing."
+      "QA Engineer focused on product systems, improving release stability through test design, regression, and risk-based validation. Experienced in defect detection, API testing, and accelerating workflows via automation and AI-assisted testing."
+    ],
+    "skills": [
+      "Test Design",
+      "Regression Testing",
+      "API Testing",
+      "Test Automation",
+      "AI-Assisted Testing"
     ]
   },
   {
@@ -14,7 +21,16 @@
     "startDate": "Sep 2022",
     "endDate": "Mar 2023",
     "description": [
-      "Junior Engineer (Full-stack) who developed a mini e-commerce web application, building frontend and backend systems, integrating APIs, and strengthening system architecture understanding using React and Golang."
+      "Junior Full-Stack Engineer developing a mini e-commerce application, delivering frontend and backend systems, integrating APIs, and applying system architecture principles using React and Go."
+    ],
+    "skills": [
+      "System Architecture",
+      "REST API",
+      "Go",
+      "PostgreSQL",
+      "Redis",
+      "React",
+      "TypeScript"
     ]
   },
   {
@@ -23,7 +39,12 @@
     "startDate": "Nov 2021",
     "endDate": "Aug 2022",
     "description": [
-      "Junior Frontend Developer specializing in responsive UI development with Vue.js, translating design into reusable components and improving implementation feasibility through close design collaboration"
+      "Junior Frontend Developer building responsive interfaces with Vue.js, converting designs into reusable components and improving implementation feasibility through design collaboration."
+    ],
+    "skills": [
+      "Vue.js",
+      "TypeScript",
+      "Atomic Design"
     ]
   }
 ]

@@ -67,6 +67,7 @@ export default {
         startDate: experience.startDate,
         endDate: experience.endDate,
         description: Array.isArray(experience.description) ? experience.description : [],
+        skills: experience.skills || [],
       })),
       projects: projectsData.map((project) => ({
         title: project.name,
@@ -74,6 +75,7 @@ export default {
         images: (project.images || [])
           .filter((image) => image && image.trim().length > 0)
           .map((image) => resolveProjectImage(image)),
+        stacks: project.stacks || [],
         links: {
           repo: normalizeOptionalLink(project.link?.repo),
           site: normalizeOptionalLink(project.link?.site),

@@ -24,6 +24,9 @@
           />
         </div>
         <p class="m-0 text-base leading-relaxed text-white md:text-base">{{ project.description }}</p>
+        <div v-if="project.stacks && project.stacks.length" class="mt-4 flex flex-wrap gap-2">
+          <SkillLabel v-for="stack in project.stacks" :key="stack" :skill="stack" />
+        </div>
         <div
           v-if="project.links && (project.links.demo || project.links.site || project.links.repo)"
           class="mt-4 flex items-center justify-end gap-3"
@@ -72,11 +75,13 @@
 
 <script>
 import SocialIcon from "./icons/SocialIcon.vue";
+import SkillLabel from "./SkillLabel.vue";
 
 export default {
   name: "ProjectSection",
   components: {
     SocialIcon,
+    SkillLabel,
   },
   props: {
     projects: {

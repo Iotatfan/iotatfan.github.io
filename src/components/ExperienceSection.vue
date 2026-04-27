@@ -4,7 +4,7 @@
     class="w-full max-w-5xl"
   >
     <div class="px-6 text-left md:px-8">
-      <h2 class="mb-6 text-xl text-center font-black tracking-[0.2em] text-white md:text-2xl">
+      <h2 class="mb-6 text-xl text-center font-black tracking-[0.2em] md:text-2xl">
         Experience
       </h2>
 
@@ -18,18 +18,22 @@
             <h3 class="m-0 text-md font-bold">
               {{ experience.jobTitle }}
             </h3>
-            <p class="m-0 text-sm font-semibold tracking-[0.14em] text-[#c2d0ff] whitespace-nowrap">
+            <p class="m-0 text-sm font-semibold tracking-[0.14em] whitespace-nowrap">
               {{ experience.startDate }} - {{ experience.endDate }}
             </p>
           </div>
 
-          <p class="m-0 mt-1 text-base font-semibold text-[#dbe4ff]">
+          <p class="m-0 mt-1 text-base font-semibold">
             {{ experience.companyName }}
           </p>
 
-          <p class="mt-3 text-base leading-relaxed text-[#f3f6ff] opacity-80">
+          <p class="mt-3 text-base leading-relaxed">
             {{ experience.description.join(" ") }}
           </p>
+
+          <div v-if="experience.skills && experience.skills.length" class="mt-4 flex flex-wrap gap-2">
+            <SkillLabel v-for="skill in experience.skills" :key="skill" :skill="skill" />
+          </div>
         </article>
       </div>
     </div>
@@ -37,8 +41,13 @@
 </template>
 
 <script>
+import SkillLabel from "./SkillLabel.vue";
+
 export default {
   name: "ExperienceSection",
+  components: {
+    SkillLabel,
+  },
   props: {
     experiences: {
       type: Array,
