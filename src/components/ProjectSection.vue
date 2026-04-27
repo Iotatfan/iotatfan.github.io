@@ -12,20 +12,29 @@
         :key="project.title + index"
         class="mx-auto w-full max-w-4xl rounded-2xl border border-white/20 bg-[#1d3c78] p-4 shadow-xl backdrop-blur-sm"
       >
-        <h3 class="mb-3 text-center text-md font-bold text-white">{{ project.title }}</h3>
+        <h3 class="text-md mb-3 text-center font-bold text-white">{{ project.title }}</h3>
         <div class="mb-3 grid grid-cols-1 gap-3 sm:grid-cols-2">
           <img
             v-for="(image, imageIndex) in project.images"
             :key="image + imageIndex"
             :src="image"
             :alt="`${project.title} image ${imageIndex + 1}`"
-            class="hover:cursor-pointer hover:scale-110 duration-150 ease-in-out h-40 w-full rounded-lg object-cover"
+            class="h-40 w-full rounded-lg object-cover duration-150 ease-in-out hover:scale-110 hover:cursor-pointer"
             @click="openImagePopup(image, project.title, imageIndex)"
           />
         </div>
-        <p class="m-0 text-base leading-relaxed text-white md:text-base">{{ project.description }}</p>
-        <div v-if="project.stacks && project.stacks.length" class="mt-4 flex flex-wrap gap-2">
-          <SkillLabel v-for="stack in project.stacks" :key="stack" :skill="stack" />
+        <p class="m-0 text-base leading-relaxed text-white md:text-base">
+          {{ project.description }}
+        </p>
+        <div
+          v-if="project.stacks && project.stacks.length"
+          class="mt-4 flex flex-wrap gap-2"
+        >
+          <SkillLabel
+            v-for="stack in project.stacks"
+            :key="stack"
+            :skill="stack"
+          />
         </div>
         <div
           v-if="project.links && (project.links.demo || project.links.site || project.links.repo)"

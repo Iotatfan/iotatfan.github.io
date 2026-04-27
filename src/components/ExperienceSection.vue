@@ -4,9 +4,7 @@
     class="w-full max-w-5xl"
   >
     <div class="px-6 text-left md:px-8">
-      <h2 class="mb-6 text-xl text-center font-black tracking-[0.2em] md:text-2xl">
-        Experience
-      </h2>
+      <h2 class="mb-6 text-center text-xl font-black tracking-[0.2em] md:text-2xl">Experience</h2>
 
       <div class="space-y-8">
         <article
@@ -15,10 +13,10 @@
           class="text-[#f3f6ff]"
         >
           <div class="flex flex-col gap-1 md:flex-row md:items-baseline md:justify-between">
-            <h3 class="m-0 text-md font-bold">
+            <h3 class="text-md m-0 font-bold">
               {{ experience.jobTitle }}
             </h3>
-            <p class="m-0 text-sm font-semibold tracking-[0.14em] whitespace-nowrap">
+            <p class="m-0 whitespace-nowrap text-sm font-semibold tracking-[0.14em]">
               {{ experience.startDate }} - {{ experience.endDate }}
             </p>
           </div>
@@ -31,8 +29,15 @@
             {{ experience.description.join(" ") }}
           </p>
 
-          <div v-if="experience.skills && experience.skills.length" class="mt-4 flex flex-wrap gap-2">
-            <SkillLabel v-for="skill in experience.skills" :key="skill" :skill="skill" />
+          <div
+            v-if="experience.skills && experience.skills.length"
+            class="mt-4 flex flex-wrap gap-2"
+          >
+            <SkillLabel
+              v-for="skill in experience.skills"
+              :key="skill"
+              :skill="skill"
+            />
           </div>
         </article>
       </div>

@@ -41,10 +41,6 @@
     "description": [
       "Junior Frontend Developer building responsive interfaces with Vue.js, converting designs into reusable components and improving implementation feasibility through design collaboration."
     ],
-    "skills": [
-      "Vue.js",
-      "TypeScript",
-      "Atomic Design"
-    ]
+    "skills": ["Vue.js", "TypeScript", "Atomic Design"]
   }
 ]
