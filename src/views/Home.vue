@@ -90,6 +90,19 @@ export default {
         }
       });
     },
+    handleGlobalScroll(e) {
+      const rightPanel = this.$el.querySelector('section:last-of-type');
+      if (rightPanel && rightPanel.scrollHeight > rightPanel.clientHeight) {
+        e.preventDefault();
+        rightPanel.scrollTop += e.deltaY;
+      }
+    },
+  },
+  mounted() {
+    window.addEventListener('wheel', this.handleGlobalScroll, { passive: false });
+  },
+  beforeUnmount() {
+    window.removeEventListener('wheel', this.handleGlobalScroll);
   },
 };
 </script>
