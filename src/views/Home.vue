@@ -6,39 +6,13 @@
       <div
         class="flex w-full flex-1 flex-col items-center gap-4 md:min-h-0 md:flex-row md:items-stretch md:gap-5 md:overflow-hidden"
       >
-        <section
-          class="flex flex-1 flex-col items-center gap-1 text-left md:sticky md:top-0 md:max-h-screen md:items-start md:gap-2 md:overflow-y-auto md:py-12 md:text-right"
-        >
-          <div class="text-2xl font-thin md:text-4xl">MUHAMMAD</div>
-          <div class="text-4xl font-black md:text-8xl">IQBAL</div>
-          <div class="text-2xl font-thin md:text-4xl">IMANI ATFAN</div>
-          <p class="m-0 max-w-md text-center text-base md:text-left md:text-lg">
-            QA Engineer focused on system reliability and user experience, with hands-on frontend
-            and backend coding experience. Enjoys building systems and playing story-driven games.
-          </p>
-          <div class="flex w-full flex-row justify-center gap-3 pt-4 md:mt-auto">
-            <SocialIcon
-              :icon="['fab', 'github']"
-              link="https://github.com/Iotatfan"
-              class="text-2xl transition duration-200 ease-in-out hover:-translate-y-0.5 hover:text-white md:text-3xl"
-            />
-            <SocialIcon
-              :icon="['fab', 'linkedin']"
-              link="https://www.linkedin.com/in/imani-atfan/"
-              class="text-2xl transition duration-200 ease-in-out hover:-translate-y-0.5 hover:text-white md:text-3xl"
-            />
-            <SocialIcon
-              :icon="['fas', 'envelope']"
-              link="mailto:imaniatfan@gmail.com"
-              class="text-2xl transition duration-200 ease-in-out hover:-translate-y-0.5 hover:text-white md:text-3xl"
-            />
-          </div>
-        </section>
+        <ProfileSection />
         <div
           class="h-px w-4/5 max-w-md md:h-28 md:w-px"
           aria-hidden="true"
         ></div>
         <section
+          ref="scrollPanel"
           class="m-0 max-w-2xl text-center text-base md:max-h-screen md:flex-1 md:self-stretch md:overflow-y-auto md:py-12 md:pr-4 md:text-left md:text-lg"
         >
           <ExperienceSection :experiences="experiences" />
@@ -54,9 +28,9 @@
 </template>
 
 <script>
+import ProfileSection from "@/components/ProfileSection.vue";
 import ExperienceSection from "@/components/ExperienceSection.vue";
 import ProjectSection from "@/components/ProjectSection.vue";
-import SocialIcon from "@/components/icons/SocialIcon.vue";
 import experiencesData from "@/assets/experiences.json";
 import projectsData from "@/assets/projects.json";
 
@@ -80,9 +54,9 @@ const resolveProjectImage = (image) =>
 
 export default {
   components: {
+    ProfileSection,
     ExperienceSection,
     ProjectSection,
-    SocialIcon,
   },
   data() {
     return {
@@ -118,7 +92,7 @@ export default {
       });
     },
     handleGlobalScroll(e) {
-      const rightPanel = this.$el.querySelector("section:last-of-type");
+      const rightPanel = this.$refs.scrollPanel;
       if (rightPanel && rightPanel.scrollHeight > rightPanel.clientHeight) {
         e.preventDefault();
         rightPanel.scrollTop += e.deltaY;
