@@ -1,10 +1,10 @@
 <template>
   <main
-    class="flex min-h-screen w-full flex-col items-center bg-home-radial px-6 text-[#f3f6ff] md:h-screen md:pb-0"
+    class="flex min-h-screen w-full flex-col items-center bg-home-radial bg-fixed px-6 text-[#f3f6ff] md:pb-0"
   >
-    <div class="flex w-full max-w-6xl flex-1 flex-col justify-center py-16 md:min-h-0 md:py-0">
+    <div class="flex w-full max-w-6xl flex-1 flex-col justify-center py-16 md:py-0">
       <div
-        class="flex w-full flex-1 flex-col items-center gap-4 md:min-h-0 md:flex-row md:items-stretch md:gap-5 md:overflow-hidden"
+        class="flex w-full flex-1 flex-col items-center gap-4 md:flex-row md:items-stretch md:gap-5"
       >
         <ProfileSection />
         <div
@@ -12,12 +12,10 @@
           aria-hidden="true"
         ></div>
         <section
-          ref="scrollPanel"
-          class="m-0 max-w-2xl text-center text-base md:max-h-screen md:flex-1 md:self-stretch md:overflow-y-auto md:py-12 md:pr-4 md:text-left md:text-lg"
+          class="m-0 max-w-2xl text-center text-base md:flex-1 md:self-stretch md:py-12 md:pr-4 md:text-left md:text-lg"
         >
           <ExperienceSection :experiences="experiences" />
           <ProjectSection
-            ref="projectSection"
             class="mt-16"
             :projects="projects"
           />
@@ -83,39 +81,5 @@ export default {
       })),
     };
   },
-  methods: {
-    scrollToProjects() {
-      this.$nextTick(() => {
-        if (this.$refs.projectSection && this.$refs.projectSection.$el) {
-          this.$refs.projectSection.$el.scrollIntoView({ behavior: "smooth", block: "start" });
-        }
-      });
-    },
-    handleGlobalScroll(e) {
-      const rightPanel = this.$refs.scrollPanel;
-      if (rightPanel && rightPanel.scrollHeight > rightPanel.clientHeight) {
-        e.preventDefault();
-        rightPanel.scrollTop += e.deltaY;
-      }
-    },
-  },
-  mounted() {
-    window.addEventListener("wheel", this.handleGlobalScroll, { passive: false });
-  },
-  beforeUnmount() {
-    window.removeEventListener("wheel", this.handleGlobalScroll);
-  },
 };
 </script>
-
-<style scoped>
-/* Hide scrollbars while keeping scroll functionality */
-::-webkit-scrollbar {
-  display: none;
-}
-
-/* Firefox */
-section {
-  scrollbar-width: none;
-}
-</style>

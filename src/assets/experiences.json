@@ -21,7 +21,7 @@
     "startDate": "Sep 2022",
     "endDate": "Mar 2023",
     "description": [
-      "Junior Full-Stack Engineer developing a mini e-commerce application, delivering frontend and backend systems, integrating APIs, and applying system architecture principles using React and Go."
+      "Completed a 6-month development program focused on software engineering fundamentals, including hands-on project implementation and practical system design."
     ],
     "skills": [
       "System Architecture",
@@ -41,6 +41,10 @@
     "description": [
       "Junior Frontend Developer building responsive interfaces with Vue.js, converting designs into reusable components and improving implementation feasibility through design collaboration."
     ],
-    "skills": ["Vue.js", "TypeScript", "Atomic Design"]
+    "skills": [
+      "Vue.js",
+      "TypeScript",
+      "Atomic Design"
+    ]
   }
 ]

@@ -1,7 +1,7 @@
 [
   {
     "name": "Hobby Collection | Full-Stack Gallery",
-    "detail": "A full-stack gallery built with React and Go to catalog Gunpla and figures. It integrates PostgreSQL, JWT auth, and Cloudinary for secure management and high-performance media hosting.",
+    "detail": "A full-stack React and Go application for managing collectible inventories, featuring secure JWT authentication, PostgreSQL storage, and optimized media delivery via Cloudinary.",
     "images": ["hobby_collection_site/1.png", "hobby_collection_site/2.png"],
     "stacks": ["React", "Go", "PostgreSQL", "Cloudinary"],
     "link": {
@@ -11,8 +11,8 @@
     }
   },
   {
-    "name": "Ama3 Bot | AI Discord Integration",
-    "detail": "A Go-based Discord bot featuring intent classification and context-aware AI conversations. It uses a dual-model fallback and concurrency to ensure high reliability and responsive, multi-user interactions.",
+    "name": "Ama3 Bot | AI-Powered Discord Bot",
+    "detail": "An AI-integrated Discord bot designed for lightweight, contextual interaction with users, leveraging structured prompt logic to generate responsive and adaptive conversational behavior.",
     "images": [],
     "stacks": ["Go", "Discord API", "OpenAI API"],
     "link": {
