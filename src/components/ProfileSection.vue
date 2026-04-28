@@ -1,15 +1,22 @@
 <template>
   <section
-    class="flex flex-1 flex-col items-center gap-1 text-left md:sticky md:top-0 md:h-screen md:max-h-screen md:items-start md:gap-2 md:self-start md:overflow-y-auto md:py-12 md:text-right"
+    class="group flex flex-1 flex-col items-center gap-1 text-left md:sticky md:top-0 md:h-screen md:max-h-screen md:items-start md:gap-2 md:self-start md:overflow-y-auto md:py-12 md:text-right"
   >
     <div class="text-2xl font-thin md:text-4xl">MUHAMMAD</div>
     <div class="text-4xl font-black md:text-8xl">IQBAL</div>
     <div class="text-2xl font-thin md:text-4xl">IMANI ATFAN</div>
-    <p class="m-0 max-w-md py-4 text-center text-base md:text-left md:text-lg">
+    <p class="m-0 max-w-md py-4 text-center text-base text-gray-300 md:text-left md:text-lg">
       QA Engineer focused on system reliability and user experience, with hands-on frontend and
       backend coding experience. Enjoys building systems and playing story-driven games.
     </p>
-    <div class="flex w-full flex-row justify-center gap-3 pt-4 md:mt-auto">
+    <div class="hidden md:block md:flex-1"></div>
+    <div
+      class="pointer-events-none hidden translate-y-2 select-none text-center text-xl italic text-gray-300 opacity-0 transition-all duration-700 group-hover:translate-y-0 group-hover:opacity-100 md:block md:text-left"
+    >
+      Why are bananas berries but strawberries aren't?
+    </div>
+    <div class="hidden md:block md:flex-1"></div>
+    <div class="flex w-full flex-row justify-center gap-6 pt-4 md:justify-start md:pt-0">
       <SocialIcon
         :icon="['fab', 'github']"
         link="https://github.com/Iotatfan"

@@ -10,13 +10,13 @@
         <article
           v-for="(experience, index) in experiences"
           :key="`${experience.jobTitle}-${experience.companyName}-${index}`"
-          class="text-[#f3f6ff]"
+          class="text-white"
         >
           <div class="flex flex-col gap-1 md:flex-row md:items-baseline md:justify-between">
             <h3 class="text-md m-0 font-bold">
               {{ experience.jobTitle }}
             </h3>
-            <p class="m-0 whitespace-nowrap text-sm font-semibold tracking-[0.14em]">
+            <p class="m-0 whitespace-nowrap text-sm font-semibold tracking-[0.14em] text-gray-300">
               {{ experience.startDate }} - {{ experience.endDate }}
             </p>
           </div>
@@ -25,7 +25,7 @@
             {{ experience.companyName }}
           </p>
 
-          <p class="mt-3 text-base leading-relaxed">
+          <p class="mt-3 text-base leading-relaxed text-gray-300">
             {{ experience.description.join(" ") }}
           </p>
 

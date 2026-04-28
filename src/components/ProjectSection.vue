@@ -23,7 +23,7 @@
             @click="openImagePopup(image, project.title, imageIndex)"
           />
         </div>
-        <p class="m-0 text-base leading-relaxed text-white md:text-base">
+        <p class="m-0 text-base leading-relaxed text-gray-300 md:text-base">
           {{ project.description }}
         </p>
         <div
