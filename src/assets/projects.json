@@ -2,12 +2,14 @@
   {
     "name": "Hobby Collection | Full-Stack Gallery",
     "detail": "A full-stack React and Go application for managing collectible inventories, featuring secure JWT authentication, PostgreSQL storage, and optimized media delivery via Cloudinary.",
-    "images": ["hobby_collection_site/1.png", "hobby_collection_site/2.png"],
+    "images": ["hobby_collection_site/1.png"],
     "stacks": ["React", "Go", "PostgreSQL", "Cloudinary"],
-    "link": {
-      "repo": null,
-      "site": "https://hobby.iotatfan.com",
-      "demo": null
+    "links": {
+      "backend": "https://github.com/Iotatfan/hobby-collection-be",
+      "frontend": "https://github.com/Iotatfan/hobby-collection",
+      "document": null,
+      "demo": "https://hobby.iotatfan.com",
+      "video": null
     }
   },
   {
@@ -15,10 +17,12 @@
     "detail": "An AI-integrated Discord bot designed for lightweight, contextual interaction with users, leveraging structured prompt logic to generate responsive and adaptive conversational behavior.",
     "images": [],
     "stacks": ["Go", "Discord API", "OpenAI API"],
-    "link": {
-      "repo": null,
-      "site": "https://discord.com/oauth2/authorize?client_id=697841248987512924",
-      "demo": "https://www.youtube.com/watch?v=nQ_TknxLxwM"
+    "links": {
+      "backend": "https://github.com/Iotatfan/Ama3-bot",
+      "frontend": null,
+      "document": null,
+      "demo": "https://discord.com/oauth2/authorize?client_id=697841248987512924",
+      "video": "https://www.youtube.com/watch?v=nQ_TknxLxwM"
     }
   }
 ]

@@ -66,19 +66,26 @@ export default {
         description: Array.isArray(experience.description) ? experience.description : [],
         skills: experience.skills || [],
       })),
-      projects: projectsData.map((project) => ({
-        title: project.name,
-        description: project.detail,
-        images: (project.images || [])
-          .filter((image) => image && image.trim().length > 0)
-          .map((image) => resolveProjectImage(image)),
-        stacks: project.stacks || [],
-        links: {
-          repo: normalizeOptionalLink(project.link?.repo),
-          site: normalizeOptionalLink(project.link?.site),
-          demo: normalizeOptionalLink(project.link?.demo),
-        },
-      })),
+      projects: projectsData.map((project) => {
+        const projectLinks = project.links || {};
+
+        return {
+          title: project.name,
+          description: project.detail,
+          images: (project.images || [])
+            .filter((image) => image && image.trim().length > 0)
+            .map((image) => resolveProjectImage(image)),
+          stacks: project.stacks || [],
+          links: {
+            frontend: normalizeOptionalLink(projectLinks.frontend),
+            backend: normalizeOptionalLink(projectLinks.backend),
+            document: normalizeOptionalLink(projectLinks.document),
+            site: normalizeOptionalLink(projectLinks.site),
+            demo: normalizeOptionalLink(projectLinks.demo),
+            video: normalizeOptionalLink(projectLinks.video),
+          },
+        };
+      }),
     };
   },
 };

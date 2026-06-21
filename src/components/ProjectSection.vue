@@ -13,13 +13,13 @@
         class="mx-auto w-full max-w-4xl rounded-2xl border border-white/20 bg-[#1d3c78] p-4 shadow-xl backdrop-blur-sm"
       >
         <h3 class="text-md mb-3 text-center font-bold text-white">{{ project.title }}</h3>
-        <div class="mb-3 grid grid-cols-1 gap-3 sm:grid-cols-2">
+        <div class="mb-3 flex flex-wrap justify-center gap-3">
           <img
             v-for="(image, imageIndex) in project.images"
             :key="image + imageIndex"
             :src="image"
             :alt="`${project.title} image ${imageIndex + 1}`"
-            class="h-40 w-full rounded-lg object-cover duration-150 ease-in-out hover:scale-110 hover:cursor-pointer"
+            class="h-40 w-full max-w-md rounded-lg object-cover duration-150 ease-in-out hover:scale-110 hover:cursor-pointer sm:w-[calc(50%-0.375rem)]"
             @click="openImagePopup(image, project.title, imageIndex)"
           />
         </div>
@@ -37,23 +37,37 @@
           />
         </div>
         <div
-          v-if="project.links && (project.links.demo || project.links.site || project.links.repo)"
+          v-if="project.links && (project.links.demo || project.links.frontend || project.links.backend || project.links.document || project.links.video)"
           class="mt-4 flex items-center justify-end gap-3"
         >
           <SocialIcon
             v-if="project.links.demo"
-            :icon="['fab', 'youtube']"
-            :link="project.links.demo"
-          />
-          <SocialIcon
-            v-if="project.links.site"
             :icon="['fas', 'link']"
-            :link="project.links.site"
+            :link="project.links.demo"
+            :description="'Live Demo'"
           />
           <SocialIcon
-            v-if="project.links.repo"
+            v-if="project.links.frontend"
             :icon="['fab', 'github']"
-            :link="project.links.repo"
+            :link="project.links.frontend"
+            :description="'Frontend Repository'"
+          />
+          <SocialIcon
+            v-if="project.links.backend"
+            :icon="['fab', 'github']"
+            :link="project.links.backend"
+            :description="'Backend Repository'"
+          />
+          <SocialIcon
+            v-if="project.links.document"
+            :icon="['fas', 'file-alt']"
+            :link="project.links.document"
+            :description="'Documentation'" || project.links.description
+          />
+          <SocialIcon
+            v-if="project.links.video"
+            :icon="['fab', 'youtube']"
+            :link="project.links.video"
           />
         </div>
       </article>

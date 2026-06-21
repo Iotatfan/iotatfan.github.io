@@ -5,6 +5,12 @@
     class="glow inline-flex items-center justify-center text-white transition duration-200 ease-in-out hover:-translate-y-0.5 hover:text-white"
   >
     <font-awesome-icon :icon="icon" />
+    <span
+      v-if="description"
+      class="ml-1 text-sm"
+    >
+      {{ description }}
+    </span>
   </a>
 </template>
 
@@ -19,6 +25,10 @@ export default {
     link: {
       type: String,
       default: null,
+    },
+    description: {
+      type: String,
+      default: "",
     },
   },
 };
