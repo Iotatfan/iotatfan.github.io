@@ -45,6 +45,22 @@ const normalizeOptionalLink = (value) => {
   return trimmedValue;
 };
 
+const normalizeRepositories = (repositories) => {
+  if (!Array.isArray(repositories)) {
+    return [];
+  }
+
+  return repositories
+    .map((repository) => ({
+      text:
+        typeof repository.text === "string" && repository.text.trim().length > 0
+          ? repository.text.trim()
+          : "Repository",
+      link: normalizeOptionalLink(repository.link),
+    }))
+    .filter((repository) => repository.link);
+};
+
 const resolveProjectImage = (image) =>
   image.startsWith("http://") || image.startsWith("https://")
     ? image
@@ -77,10 +93,8 @@ export default {
             .map((image) => resolveProjectImage(image)),
           stacks: project.stacks || [],
           links: {
-            frontend: normalizeOptionalLink(projectLinks.frontend),
-            backend: normalizeOptionalLink(projectLinks.backend),
+            repositories: normalizeRepositories(projectLinks.repositories),
             document: normalizeOptionalLink(projectLinks.document),
-            site: normalizeOptionalLink(projectLinks.site),
             demo: normalizeOptionalLink(projectLinks.demo),
             video: normalizeOptionalLink(projectLinks.video),
           },

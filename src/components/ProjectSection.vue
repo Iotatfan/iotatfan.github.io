@@ -37,8 +37,14 @@
           />
         </div>
         <div
-          v-if="project.links && (project.links.demo || project.links.frontend || project.links.backend || project.links.document || project.links.video)"
-          class="mt-4 flex items-center justify-end gap-3"
+          v-if="
+            project.links &&
+            (project.links.demo ||
+              project.links.repositories.length ||
+              project.links.document ||
+              project.links.video)
+          "
+          class="mt-4 flex flex-wrap items-center justify-end gap-3"
         >
           <SocialIcon
             v-if="project.links.demo"
@@ -47,27 +53,22 @@
             :description="'Live Demo'"
           />
           <SocialIcon
-            v-if="project.links.frontend"
+            v-for="repository in project.links.repositories"
+            :key="repository.link"
             :icon="['fab', 'github']"
-            :link="project.links.frontend"
-            :description="'Frontend Repository'"
-          />
-          <SocialIcon
-            v-if="project.links.backend"
-            :icon="['fab', 'github']"
-            :link="project.links.backend"
-            :description="'Backend Repository'"
-          />
-          <SocialIcon
-            v-if="project.links.document"
-            :icon="['fas', 'file-alt']"
-            :link="project.links.document"
-            :description="'Documentation'" || project.links.description
+            :link="repository.link"
+            :description="repository.text"
           />
           <SocialIcon
             v-if="project.links.video"
             :icon="['fab', 'youtube']"
             :link="project.links.video"
+          />
+          <SocialIcon
+            v-if="project.links.document"
+            :icon="['fas', 'file-alt']"
+            :link="project.links.document"
+            :description="'Documentation'"
           />
         </div>
       </article>

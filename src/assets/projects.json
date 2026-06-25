@@ -3,12 +3,37 @@
     "name": "Hobby Collection | Full-Stack Gallery",
     "detail": "A full-stack React and Go application for managing collectible inventories, featuring secure JWT authentication, PostgreSQL storage, and optimized media delivery via Cloudinary.",
     "images": ["hobby_collection_site/1.png"],
-    "stacks": ["React", "Go", "PostgreSQL", "Cloudinary"],
+    "stacks": ["React", "Typescript", "Go", "PostgreSQL", "Cloudinary"],
     "links": {
-      "backend": "https://github.com/Iotatfan/hobby-collection-be",
-      "frontend": "https://github.com/Iotatfan/hobby-collection",
+      "repositories": [
+        {
+          "text": "Backend Repository",
+          "link": "https://github.com/Iotatfan/hobby-collection-be"
+        },
+        {
+          "text": "Frontend Repository",
+          "link": "https://github.com/Iotatfan/hobby-collection"
+        }
+      ],
       "document": null,
       "demo": "https://hobby.iotatfan.com",
+      "video": null
+    }
+  },
+    {
+    "name": "Hobby Collection Test Suites",
+    "detail": "An automated test suite for Hobby Collection, utlizing Playwright for E2E and API testing, and k6 for performance testing, ensuring robust application reliability and performance under various scenarios.",
+    "images": [""],
+    "stacks": ["Playwright", "k6", "Typescript"],
+    "links": {
+      "repositories": [
+        {
+          "text": "Github",
+          "link": "https://github.com/Iotatfan/hobby-collection-test"
+        }
+      ],
+      "document": null,
+      "demo": null,
       "video": null
     }
   },
@@ -18,8 +43,12 @@
     "images": [],
     "stacks": ["Go", "Discord API", "OpenAI API"],
     "links": {
-      "backend": "https://github.com/Iotatfan/Ama3-bot",
-      "frontend": null,
+      "repositories": [
+        {
+          "text": "Github",
+          "link": "https://github.com/Iotatfan/Ama3-bot"
+        }
+      ],
       "document": null,
       "demo": "https://discord.com/oauth2/authorize?client_id=697841248987512924",
       "video": "https://www.youtube.com/watch?v=nQ_TknxLxwM"
