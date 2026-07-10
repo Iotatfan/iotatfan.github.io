@@ -6,8 +6,10 @@
     <div class="text-4xl font-black md:text-8xl">IQBAL</div>
     <div class="text-2xl font-thin md:text-4xl">IMANI ATFAN</div>
     <p class="m-0 max-w-md py-4 text-center text-base text-gray-300 md:text-left md:text-lg">
-      QA Engineer focused on system reliability and user experience, with hands-on frontend and
-      backend coding experience. Enjoys building systems and playing story-driven games.
+      Software Engineer with a passion for system reliability and performance testing. Experienced
+      in building modular Go backends and scalable React frontends, while leveraging an engineering
+      mindset to design robust automated testing pipelines (Playwright, k6) that ensure production
+      stability.
     </p>
     <div class="hidden md:block md:flex-1"></div>
     <div

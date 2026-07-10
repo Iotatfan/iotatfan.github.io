@@ -1,9 +1,9 @@
 [
   {
     "name": "Hobby Collection | Full-Stack Gallery",
-    "detail": "A full-stack React and Go application for managing collectible inventories, featuring secure JWT authentication, PostgreSQL storage, and optimized media delivery via Cloudinary.",
-    "images": ["hobby_collection_site/1.png"],
-    "stacks": ["React", "Typescript", "Go", "PostgreSQL", "Cloudinary"],
+    "detail": "A full-stack application for managing collectible inventories, featuring secure JWT authentication, relational storage via PostgreSQL, and optimized media delivery via Cloudinary. Implements Redis for targeted data caching to reduce database read overhead on frequent queries.",
+    "images": ["hobby_collection_site/1.png", "hobby_collection_site/1_alt.png"],
+    "stacks": ["React", "Typescript", "Chakra UI", "Go", "PostgreSQL", "Redis", "Cloudinary"],
     "links": {
       "repositories": [
         {
@@ -12,7 +12,7 @@
         },
         {
           "text": "Frontend Repository",
-          "link": "https://github.com/Iotatfan/hobby-collection"
+          "link": "https://github.com/Iotatfan/hobby-collection-fe"
         }
       ],
       "document": null,
@@ -20,9 +20,9 @@
       "video": null
     }
   },
-    {
+  {
     "name": "Hobby Collection Test Suites",
-    "detail": "An automated test suite for Hobby Collection, utlizing Playwright for E2E and API testing, and k6 for performance testing, ensuring robust application reliability and performance under various scenarios.",
+    "detail": "An automated test suite for Hobby Collection, utilizing Playwright for E2E and API testing, and k6 for performance testing, ensuring robust application reliability and performance under various scenarios.",
     "images": [""],
     "stacks": ["Playwright", "k6", "Typescript"],
     "links": {
@@ -52,6 +52,27 @@
       "document": null,
       "demo": "https://discord.com/oauth2/authorize?client_id=697841248987512924",
       "video": "https://www.youtube.com/watch?v=nQ_TknxLxwM"
+    }
+  },
+  {
+    "name": "Lightweight Link Shortener",
+    "detail": "A lightweight, low-latency URL shortener featuring a responsive Tailwind UI and unique short-hash generation. Built on a modular Go and PostgreSQL backend framework designed to support seamless utility integration.",
+    "images": [],
+    "stacks": ["React", "Typescript", "Tailwind CSS", "Go", "PostgreSQL", "Redis"],
+    "links": {
+      "repositories": [
+        {
+          "text": "Backend Repository",
+          "link": "https://github.com/Iotatfan/hobby-collection-be"
+        },
+        {
+          "text": "Frontend Repository",
+          "link": "https://github.com/Iotatfan/iotalink"
+        }
+      ],
+      "document": null,
+      "demo": "https://s.iotatfan.com",
+      "video": null
     }
   }
 ]
