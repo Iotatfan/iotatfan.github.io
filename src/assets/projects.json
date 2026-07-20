@@ -1,9 +1,23 @@
 [
   {
     "name": "Hobby Collection | Full-Stack Gallery",
-    "detail": "A full-stack application for managing collectible inventories, featuring secure JWT authentication, relational storage via PostgreSQL, and optimized media delivery via Cloudinary. Implements Redis for targeted data caching to reduce database read overhead on frequent queries.",
+    "detail": "Full-stack collection management platform built with React, Go, and PostgreSQL.",
+    "bullets": [
+      "JWT authentication & protected APIs.",
+      "Responsive React UI with Chakra UI.",
+      "Playwright E2E, API, and test-suite automation."
+    ],
     "images": ["hobby_collection_site/1.png", "hobby_collection_site/1_alt.png"],
-    "stacks": ["React", "Typescript", "Chakra UI", "Go", "PostgreSQL", "Redis", "Cloudinary"],
+    "stacks": [
+      "React",
+      "Typescript",
+      "Chakra UI",
+      "Go",
+      "PostgreSQL",
+      "Redis",
+      "Cloudinary",
+      "Docker"
+    ],
     "links": {
       "repositories": [
         {
@@ -22,7 +36,12 @@
   },
   {
     "name": "Hobby Collection Test Suites",
-    "detail": "An automated test suite for Hobby Collection, utilizing Playwright for E2E and API testing, and k6 for performance testing, ensuring robust application reliability and performance under various scenarios.",
+    "detail": "Dedicated automation and performance testing suite for the Hobby Collection platform.",
+    "bullets": [
+      "Playwright E2E and API test automation.",
+      "Gherkin-based test scenarios and assertions.",
+      "k6 load testing for concurrent user validation."
+    ],
     "images": [""],
     "stacks": ["Playwright", "k6", "Typescript"],
     "links": {
@@ -39,7 +58,12 @@
   },
   {
     "name": "Ama3 Bot | AI-Powered Discord Bot",
-    "detail": "An AI-integrated Discord bot designed for lightweight, contextual interaction with users, leveraging structured prompt logic to generate responsive and adaptive conversational behavior.",
+    "detail": "AI-powered Discord bot built with Go, PostgreSQL, and the OpenAI API.",
+    "bullets": [
+      "Concurrent request processing using goroutines.",
+      "Modular command architecture for scalable feature development.",
+      "Conversation session management and AI-assisted responses."
+    ],
     "images": [],
     "stacks": ["Go", "Discord API", "OpenAI API"],
     "links": {
@@ -56,7 +80,12 @@
   },
   {
     "name": "Lightweight Link Shortener",
-    "detail": "A lightweight, low-latency URL shortener featuring a responsive Tailwind UI and unique short-hash generation. Built on a modular Go and PostgreSQL backend framework designed to support seamless utility integration.",
+    "detail": "URL shortener service integrated into a custom domain and subdomain architecture.",
+    "bullets": [
+      "HTTP redirects & short-code generation.",
+      "Link expiration & error handling.",
+      "Public API endpoint design."
+    ],
     "images": [],
     "stacks": ["React", "Typescript", "Tailwind CSS", "Go", "PostgreSQL", "Redis"],
     "links": {

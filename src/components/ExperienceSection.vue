@@ -29,6 +29,16 @@
             {{ experience.description.join(" ") }}
           </p>
 
+          <ul
+            class="list-disc pl-6"
+            v-for="(text, index) in experience.bullets"
+            :key="index"
+          >
+            <li class="m-0 text-left text-base leading-relaxed text-gray-300 md:text-base">
+              {{ text }}
+            </li>
+          </ul>
+
           <div
             v-if="experience.skills && experience.skills.length"
             class="mt-4 flex flex-wrap gap-2"

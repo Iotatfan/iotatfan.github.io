@@ -5,7 +5,12 @@
     "startDate": "Mar 2023",
     "endDate": "Apr 2026",
     "description": [
-      "QA Engineer focused on product systems, improving release stability through test design, regression, and risk-based validation. Experienced in defect detection, API testing, and accelerating workflows via automation and AI-assisted testing."
+      "Focused on product quality and release stability through test design, regression validation, and API testing."
+    ],
+    "bullets": [
+      "Designed and maintained manual and regression test cases for production features.",
+      "Conducted API testing, defect analysis, and cross-team validation during release processes.",
+      "Applied automation and AI-assisted testing approaches to improve testing efficiency and issue detection."
     ],
     "skills": [
       "Test Cases Design",
@@ -21,7 +26,12 @@
     "startDate": "Sep 2022",
     "endDate": "Mar 2023",
     "description": [
-      "Completed a 6-month development program focused on software engineering fundamentals, including hands-on project implementation and practical system design."
+      "Contributed to full-stack application development using React and Go in a structured engineering training program."
+    ],
+    "bullets": [
+      "Built frontend features with React and TypeScript.",
+      "Developed REST API functionality using Go.",
+      "Worked with Git-based collaboration and modular project architecture."
     ],
     "skills": [
       "System Architecture",
@@ -39,7 +49,12 @@
     "startDate": "Nov 2021",
     "endDate": "Aug 2022",
     "description": [
-      "Junior Frontend Developer building responsive interfaces with Vue.js, converting designs into reusable components and improving implementation feasibility through design collaboration."
+      "Worked on production web applications using Vue.js in a collaborative software development environment."
+    ],
+    "bullets": [
+      "Developed and maintained Vue.js features for production applications.",
+      "Integrated frontend components with backend APIs and application state management.",
+      "Collaborated with designers, backend developers, and QA teams to deliver new features and bug fixes."
     ],
     "skills": ["Vue.js", "TypeScript", "Atomic Design"]
   }

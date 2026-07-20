@@ -80,6 +80,7 @@ export default {
         startDate: experience.startDate,
         endDate: experience.endDate,
         description: Array.isArray(experience.description) ? experience.description : [],
+        bullets: experience.bullets || [],
         skills: experience.skills || [],
       })),
       projects: projectsData.map((project) => {
@@ -88,6 +89,7 @@ export default {
         return {
           title: project.name,
           description: project.detail,
+          bullets: project.bullets || [],
           images: (project.images || [])
             .filter((image) => image && image.trim().length > 0)
             .map((image) => resolveProjectImage(image)),

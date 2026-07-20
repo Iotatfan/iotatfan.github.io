@@ -5,9 +5,12 @@
     <div class="text-2xl font-thin md:text-4xl">MUHAMMAD</div>
     <div class="text-4xl font-black md:text-8xl">IQBAL</div>
     <div class="text-2xl font-thin md:text-4xl">IMANI ATFAN</div>
-    <div class="text-xl md:text-2xl text-center md:text-left">Frontend Developer with Full-Stack & QA Experience</div>
+    <div class="text-center text-xl md:text-left md:text-2xl">
+      Frontend Developer with Full-Stack & QA Experience
+    </div>
     <p class="m-0 max-w-md py-4 text-center text-base text-gray-300 md:text-left md:text-lg">
-      Build responsive React/Vue applications, design Go REST APIs, and automate testing with Playwright.
+      Build responsive React/Vue applications, design Go REST APIs, and automate testing with
+      Playwright.
     </p>
     <div class="hidden md:block md:flex-1"></div>
     <div
