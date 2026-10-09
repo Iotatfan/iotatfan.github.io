@@ -1,19 +1,32 @@
 [
   {
+    "jobTitle": "Full-Stack Engineer",
+    "companyName": "Bank Rakyat Indonesia (BRI)",
+    "startDate": "Aug 2026",
+    "endDate": "Present",
+    "description": [
+      "Full-stack engineer at Bank Rakyat Indonesia (BRI)."
+    ],
+    "bullets": [
+
+    ],
+    "skills": ["Go", "Gin", "GORM", "MySQL", "SQL", "Next.js"]
+  },
+  {
     "jobTitle": "Software QA Engineer",
     "companyName": "Shopee Indonesia",
     "startDate": "Mar 2023",
     "endDate": "Apr 2026",
     "description": [
-      "Focused on product quality and release stability through test design, regression validation, and API testing."
+      "Supported product quality and release stability through test case design, regression testing, and API validation."
     ],
     "bullets": [
-      "Designed and maintained manual and regression test cases for production features.",
-      "Conducted API testing, defect analysis, and cross-team validation during release processes.",
-      "Applied automation and AI-assisted testing approaches to improve testing efficiency and issue detection."
+      "Designed and maintained test cases for manual and regression testing of production features.",
+      "Tested APIs, analyzed defects, and coordinated validation across teams during releases.",
+      "Used test automation and AI-assisted testing to improve efficiency and defect detection."
     ],
     "skills": [
-      "Test Cases Design",
+      "Test Case Design",
       "Regression Testing",
       "API Testing",
       "Test Automation",
@@ -26,16 +39,16 @@
     "startDate": "Sep 2022",
     "endDate": "Mar 2023",
     "description": [
-      "Contributed to full-stack application development using React and Go in a structured engineering training program."
+      "Developed full-stack application features with React and Go as part of the Digitalent engineering training program."
     ],
     "bullets": [
       "Built frontend features with React and TypeScript.",
-      "Developed REST API functionality using Go.",
-      "Worked with Git-based collaboration and modular project architecture."
+      "Implemented REST API functionality in Go.",
+      "Collaborated using Git and contributed to a modular application architecture."
     ],
     "skills": [
       "System Architecture",
-      "REST API",
+      "REST APIs",
       "Go",
       "PostgreSQL",
       "Redis",
@@ -49,12 +62,12 @@
     "startDate": "Nov 2021",
     "endDate": "Aug 2022",
     "description": [
-      "Worked on production web applications using Vue.js in a collaborative software development environment."
+      "Developed and maintained production web applications with Vue.js, collaborating with design, backend, and QA teams."
     ],
     "bullets": [
-      "Developed and maintained Vue.js features for production applications.",
-      "Integrated frontend components with backend APIs and application state management.",
-      "Collaborated with designers, backend developers, and QA teams to deliver new features and bug fixes."
+      "Built and maintained frontend features in Vue.js.",
+      "Connected frontend components to backend APIs and managed application state.",
+      "Worked with designers, backend developers, and QA engineers to deliver features and resolve defects."
     ],
     "skills": ["Vue.js", "TypeScript", "Atomic Design"]
   }
